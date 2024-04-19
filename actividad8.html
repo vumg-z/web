@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listas Ordenadas</title>
+    <style>
+        /* Estilo básico para la lista principal */
+        ol {
+            counter-reset: section;  /* Reinicia el contador para la lista principal */
+            list-style-type: none;   /* Elimina el estilo por defecto de la lista */
+        }
+
+        /* Estilo para los ítems de la lista principal */
+        ol > li {
+            counter-increment: section; /* Incrementa el contador para cada ítem */
+            margin-bottom: 5px;         /* Espacio entre ítems principales */
+        }
+
+        /* Estilo para los números de la lista principal */
+        ol > li:before {
+            content: counter(section) ". "; /* Muestra el contador */
+            font-weight: bold;              /* Texto en negrita */
+        }
+
+        /* Estilo para las sublistas (España) */
+        ol > li > ol {
+            list-style-type: lower-alpha; /* Letras minúsculas */
+            margin-left: 20px;           /* Indentación de la sublista */
+        }
+
+        /* Estilo para las sublistas (EE.UU.) */
+        ol > li:last-child > ol {
+            list-style-type: upper-roman; /* Números romanos mayúsculas */
+            margin-left: 20px;           /* Indentación de la sublista */
+        }
+    </style>
+</head>
+<body>
+    <h1>Diarios de:</h1>
+    <ol>
+        <li>ESPAÑA...
+            <ol>
+                <li>El Mundo</li>
+                <li>El País</li>
+                <li>La Vanguardia</li>
+            </ol>
+        </li>
+        <li>EE.UU.
+            <ol>
+                <li>New York Times</li>
+                <li>The Washington Post</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>
