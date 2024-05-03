@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con fondo fijo</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .background {
+            background-image: url('ruta-a-tu-imagen.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100%;
+            overflow: auto;
+            padding: 20px;
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="content">
+            <h1>Publicidad</h1>
+            <p>La predicción del gasto en publicidad digital es de 87 miles de millones de euros en 2013.</p>
+            <p>En Europa Occidental Internet se llevará aproximadamente la cuarta parte de esta cifra, pero con grandes variaciones entre los distintos países.</p>
+            <h1>Internet en España</h1>
+            <p>Había más de 31 millones de usuarios de Internet a 30 de Junio de 2012, lo que representa el 67.2% de la población. Tú ya eres una de esas personas.</p>
+            <h1>Historia</h1>
+            <p>La primera descripción de las posibilidades de interacción social a través de la red se atribuye a J.C.R. Licklider, del MIT, en agosto de 1962...</p>
+            <!-- Continúa agregando todo el texto que necesitas -->
+            <h1>Percepciones</h1>
+            <p>La gente que usa Internet:</p>
+            <ul>
+                <li>El 96% se conecta todos los días.</li>
+                <li>El 98% lo considera esencial para el conocimiento.</li>
+                <li>El 30% piensa que hay censura.</li>
+                <li>El 84% ha ocultado alguna vez su localización.</li>
+                <li>El 50% a veces falsea los datos personales.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

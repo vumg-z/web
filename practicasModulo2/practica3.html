@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .art-image {
+            width: 40em;
+            transition: width 0.3s;
+        }
+
+        .art-image:hover {
+            width: 45em;
+        }
+
+        .title {
+            margin-top: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .title:hover::after {
+            content: attr(data-author);
+            position: absolute;
+            left: 100%;
+            white-space: nowrap;
+            background: white;
+            border: 1px solid black;
+            padding: 5px;
+            top: 0;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <div class="image-container">
+            <img src="https://images5.alphacoders.com/371/371853.jpg" alt="Obra 1" class="art-image">
+            <div class="title" data-author="Autor 1">Reach</div>
+        </div>
+        <div class="image-container">
+            <img src="https://images6.alphacoders.com/321/thumb-1920-321785.jpg" alt="Obra 2" class="art-image">
+            <div class="title" data-author="Autor 2">No tardo</div>
+        </div>
+        <div class="image-container">
+            <img src="https://images7.alphacoders.com/374/374601.jpg" alt="Obra 3" class="art-image">
+            <div class="title" data-author="Autor 2">En</div>
+        </div>
+        <div class="image-container">
+            <img src="https://images7.alphacoders.com/577/577154.jpg" alt="Obra 4" class="art-image">
+            <div class="title" data-author="Autor 2">Caer</div>
+        </div>
+        <div class="image-container">
+            <img src="https://images8.alphacoders.com/380/380728.jpg" alt="Obra 4" class="art-image">
+            <div class="title" data-author="Autor 2">El enemigo</div>
+        </div>
+        <div class="image-container">
+            <img src="https://images8.alphacoders.com/380/380745.jpg" alt="Obra 4" class="art-image">
+            <div class="title" data-author="Autor 2">Era Eficiente, implacable</div>
+        </div>
+        <div class="image-container">
+            <img src="https://images7.alphacoders.com/380/380729.jpg" alt="Obra 4" class="art-image">
+            <div class="title" data-author="Autor 2">pero no fue</div>
+        </div>
+        <div class="image-container">
+            <img src="https://images6.alphacoders.com/316/316371.jpg" alt="Obra 4" class="art-image">
+            <div class="title" data-author="Autor 2">lo suficientemente rapido</div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
